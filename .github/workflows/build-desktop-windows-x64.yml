@@ -60,11 +60,25 @@ jobs:
           '@ | Set-Content -NoNewline -Encoding UTF8 source/apps/desktop/.env.windows
 
       - name: Install dependencies
+        id: install
         working-directory: source
         shell: pwsh
         run: |
           $env:PYTHON = (Get-Command python).Source
-          pnpm install --frozen-lockfile --package-import-method=clone
+          pnpm install --frozen-lockfile --package-import-method=clone 2>&1 | Tee-Object -FilePath install.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Publish install diagnostics on failure
+        if: failure() && steps.install.conclusion == 'failure'
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force diagnostics | Out-Null
+          Copy-Item source/install.log diagnostics/install.log
+          git config user.name 'desktop-build-bot'
+          git config user.email 'desktop-build-bot@users.noreply.github.com'
+          git add diagnostics/install.log
+          git commit -m 'Add install diagnostics'
+          git push origin HEAD:refs/heads/dsh-desktop-win-x64-20260922
 
       - name: Build unsigned Windows x64 installer
         working-directory: source
