@@ -28,6 +28,12 @@ jobs:
           path: source
           persist-credentials: false
 
+      - name: Enable Windows Developer Mode (symlink support)
+        shell: pwsh
+        run: >-
+          reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock"
+          /t REG_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"
+
       - uses: pnpm/action-setup@v4
         with:
           version: 11.7.0
