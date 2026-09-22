@@ -1,0 +1,38 @@
+native/system/packages/darwin-arm64      | [WARN] Unsupported platform: wanted: {"cpu":["arm64"],"os":["darwin"],"libc":["any"]} (current: {"os":"win32","cpu":"x64","libc":"unknown"})
+native/system/packages/darwin-x64        | [WARN] Unsupported platform: wanted: {"cpu":["x64"],"os":["darwin"],"libc":["any"]} (current: {"os":"win32","cpu":"x64","libc":"unknown"})
+native/system/packages/linux-arm64       | [WARN] Unsupported platform: wanted: {"cpu":["arm64"],"os":["linux"],"libc":["any"]} (current: {"os":"win32","cpu":"x64","libc":"unknown"})
+native/system/packages/linux-x64         | [WARN] Unsupported platform: wanted: {"cpu":["x64"],"os":["linux"],"libc":["any"]} (current: {"os":"win32","cpu":"x64","libc":"unknown"})
+Scope: all 330 workspace projects
+[WARN] There are cyclic workspace dependencies: D:\a\test\test\source\apps\web, D:\a\test\test\source\packages\test-support\client-runtime, D:\a\test\test\source\packages\bundle\web-app; D:\a\test\test\source\packages\api\remotes, D:\a\test\test\source\packages\client\file-upload; D:\a\test\test\source\packages\client\ui-conversation, D:\a\test\test\source\packages\client\ui-workspace; D:\a\test\test\source\packages\compaction\compaction-basic, D:\a\test\test\source\packages\compaction\compaction-image-offload; D:\a\test\test\source\packages\compaction\compaction-tool-result-pruner, D:\a\test\test\source\packages\llm\token-meter, D:\a\test\test\source\packages\llm\llm-retry, D:\a\test\test\source\packages\llm\llm-deepseek, D:\a\test\test\source\packages\llm\plugin-package-inventory-deepseek, D:\a\test\test\source\packages\preset\agent-preset-registry, D:\a\test\test\source\packages\preset\agent-preset; D:\a\test\test\source\packages\core\agent-default-model, D:\a\test\test\source\packages\settings\settings; D:\a\test\test\source\packages\sandbox\sandbox-local, D:\a\test\test\source\packages\sandbox\sandbox-windows-acl; D:\a\test\test\source\packages\ssh\fs-ssh, D:\a\test\test\source\packages\ssh\ssh; D:\a\test\test\source\packages\subagent\subagent-spawn-in-process, D:\a\test\test\source\packages\subagent\tool-subagent; D:\a\test\test\source\vendor\cordis, D:\a\test\test\source\vendor\include
+? Verifying lockfile against supply-chain policies (1679 entries)...
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +1386
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 1386, reused 0, downloaded 74, added 0
+Progress: resolved 1386, reused 0, downloaded 161, added 0
+Progress: resolved 1386, reused 0, downloaded 198, added 0
+Progress: resolved 1386, reused 0, downloaded 222, added 0
+Progress: resolved 1386, reused 0, downloaded 315, added 0
+Progress: resolved 1386, reused 0, downloaded 370, added 0
+Progress: resolved 1386, reused 0, downloaded 447, added 0
+Progress: resolved 1386, reused 0, downloaded 486, added 0
+Progress: resolved 1386, reused 0, downloaded 546, added 0
+Progress: resolved 1386, reused 0, downloaded 612, added 0
+✓ Lockfile passes supply-chain policies (1679 entries in 11.3s)
+Progress: resolved 1386, reused 0, downloaded 745, added 0
+Progress: resolved 1386, reused 0, downloaded 855, added 0
+Progress: resolved 1386, reused 0, downloaded 956, added 0
+Progress: resolved 1386, reused 0, downloaded 984, added 0
+Progress: resolved 1386, reused 0, downloaded 1023, added 0
+Progress: resolved 1386, reused 0, downloaded 1077, added 0
+Progress: resolved 1386, reused 0, downloaded 1139, added 0
+Progress: resolved 1386, reused 0, downloaded 1217, added 0
+Progress: resolved 1386, reused 0, downloaded 1242, added 0
+Progress: resolved 1386, reused 0, downloaded 1290, added 0
+Progress: resolved 1386, reused 0, downloaded 1357, added 0
+Progress: resolved 1386, reused 0, downloaded 1378, added 0
+Progress: resolved 1386, reused 0, downloaded 1380, added 3
+Progress: resolved 1386, reused 0, downloaded 1381, added 7
+Progress: resolved 1386, reused 0, downloaded 1381, added 14
+[ERR_PNPM_LINKING_FAILED] [importPackage D:\a\test\test\source\node_modules\.pnpm\@stylistic+eslint-plugin@5.10.0_eslint@10.5.0_jiti@2.7.0_\node_modules\@stylistic\eslint-plugin] Source volume does not support copy-on-write, reflink 'D:\.pnpm-store\v11\files\4c\8fe1e64a7b88dbb1926523f6645773930fd62e968f04731520f3c91eaf7f25af867d8f30c13637dcfbef3defce714a72152cce94412a4fab946132cc08c086' -> 'D:\a\test\test\source\node_modules\.pnpm\@stylistic+eslint-plugin@5.10.0_eslint@10.5.0_jiti@2.7.0_\node_modules\@stylistic\eslint-plugin_tmp_8796_2\dist\rules\array-bracket-newline.js'
