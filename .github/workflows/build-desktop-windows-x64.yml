@@ -65,7 +65,7 @@ jobs:
         shell: pwsh
         run: |
           $env:PYTHON = (Get-Command python).Source
-          pnpm install --frozen-lockfile --package-import-method=clone 2>&1 | Tee-Object -FilePath install.log
+          pnpm install --frozen-lockfile --package-import-method=copy 2>&1 | Tee-Object -FilePath install.log
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Publish install diagnostics on failure
